@@ -1,0 +1,31 @@
+services:
+  mysql:
+    image: db
+    restart: always
+    container_name: mysql
+    env_file:
+      - .env
+    volumes:
+      #- './db/MySQL:/tmp/db'
+      - ./data:/var/lib/mysql
+    #command: mysqld --init-file="/tmp/db/create.sql" --max-connections=500
+  
+  tomcat:
+    image: web
+    container_name: tomcat
+    env_file:
+      - .env    
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/Livraria.war:/usr/local/tomcat/webapps/Livraria.war
+    depends_on:
+      - mysql
+  
+  image_store:
+    image: nginx:alpine
+    container_name: image_store
+    volumes:
+      - ./book-covers:/usr/share/nginx/html
+    ports:
+      - "8080:80"

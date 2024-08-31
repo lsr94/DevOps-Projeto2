@@ -1,0 +1,26 @@
+.inicial {
+    width: 10%; 
+    height: 10%; 
+    margin: 5% auto;
+    padding: 10%; 
+    background-color: rgba(20, 18, 53, 0.623);
+    border-radius: 10%; 
+    text-align: center; /* Centraliza os links */
+}
+
+a {
+    display: inline-block;
+    margin: 5%; 
+    padding: 7%; 
+    background-color: rgba(55, 219, 157, 0.7);
+    border-radius: 5%;
+    text-decoration: none; 
+    color: white;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    background-color: rgb(55, 219, 156);
+    color: black;
+    transition-delay: 0.1s;
+}
