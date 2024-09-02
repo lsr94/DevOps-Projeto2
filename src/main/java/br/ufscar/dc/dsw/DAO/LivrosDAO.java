@@ -8,10 +8,42 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.ufscar.dc.dsw.domain.Capa;
 import br.ufscar.dc.dsw.domain.Editora;
 import br.ufscar.dc.dsw.domain.Livro;
+import br.ufscar.dc.dsw.domain.Capa;
 
 public class LivrosDAO extends genericDAO {
+
+    public Capa getCapaLivro(Livro livro){
+        long livroID = livro.getId();
+
+        String sql = "SELECT * FROM Capa WHERE livro_id = ?";
+
+        Capa capa = null;
+
+        try{
+            Connection conn = this.getConnection();
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setLong(1, livroID);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Long id = resultSet.getLong("id");
+                String caminho = resultSet.getString("caminho");
+                Long idLivro = resultSet.getLong("livro_id");
+                capa = new Capa(id, caminho, idLivro);
+            }
+            resultSet.close();
+            statement.close();
+            conn.close();
+        }
+        catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+
+        return capa;
+    }
 
     public void insert(Livro livro) {
 

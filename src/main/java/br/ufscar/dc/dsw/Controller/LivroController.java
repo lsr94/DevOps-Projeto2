@@ -1,19 +1,22 @@
 package br.ufscar.dc.dsw.Controller;
 
-import br.ufscar.dc.dsw.DAO.EditoraDAO;
-import br.ufscar.dc.dsw.DAO.LivrosDAO;
-import br.ufscar.dc.dsw.domain.Editora;
-import br.ufscar.dc.dsw.domain.Livro;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.ufscar.dc.dsw.DAO.EditoraDAO;
+import br.ufscar.dc.dsw.DAO.LivrosDAO;
+import br.ufscar.dc.dsw.domain.Capa;
+import br.ufscar.dc.dsw.domain.Editora;
+import br.ufscar.dc.dsw.domain.Livro;
 
 @WebServlet(urlPatterns = "/livros/*")
 public class LivroController extends HttpServlet {
@@ -55,6 +58,9 @@ public class LivroController extends HttpServlet {
                 case "/atualizacao":
                     atualize(request, response);
                     break;
+                case "/pegarCapa":
+                    pegarCapa(request, response);
+                    break;
                 default:
                     lista(request, response);
                     break;
@@ -62,6 +68,19 @@ public class LivroController extends HttpServlet {
         } catch (RuntimeException | IOException | ServletException e) {
             throw new ServletException(e);
         }
+    }
+
+    private void pegarCapa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Long id = Long.parseLong(request.getParameter("id"));
+        Capa capa = dao.getCapaLivro(new Livro(id));
+        
+        // Verifique se o valor está sendo definido corretamente
+        System.out.println("Caminho da Capa: " + capa.getCaminho());
+        
+        Long idLivro = capa.getIdLivro(); // testei e nao foi
+        request.setAttribute("caminhoCapa", "capa" + id + ".jpg");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/livro/capaLivro.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void lista(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

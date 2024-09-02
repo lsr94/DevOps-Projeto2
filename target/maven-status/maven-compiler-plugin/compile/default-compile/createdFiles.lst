@@ -1,5 +1,6 @@
 br/ufscar/dc/dsw/Controller/EditoraController.class
 br/ufscar/dc/dsw/domain/Livro.class
+br/ufscar/dc/dsw/domain/Capa.class
 br/ufscar/dc/dsw/Controller/LivroController.class
 br/ufscar/dc/dsw/DAO/LivrosDAO.class
 br/ufscar/dc/dsw/DAO/genericDAO.class

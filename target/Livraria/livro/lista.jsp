@@ -25,6 +25,7 @@
 				<th>Autor</th>
 				<th>Ano</th>
 				<th>Preço</th>
+				<th>Capa</th>
 				<th>Acões</th>
 			</tr>
 			<c:forEach var="livro" items="${requestScope.listaLivros}">
@@ -35,6 +36,7 @@
 					<td>${livro.autor}</td>
 					<td>${livro.ano}</td>
 					<td>${livro.preco}</td>
+					<td><a href="/${requestScope.contextPath}/livros/pegarCapa?id=${livro.id}">Capa do livro</a></td>
 					<td><a href="/${requestScope.contextPath}/livros/edicao?id=${livro.id}">Edição</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
 						href="/${requestScope.contextPath}/livros/remocao?id=${livro.id}"
