@@ -1,0 +1,17 @@
+# Esse arquivo é de volume persistente (persistent volume - pv)
+# Define o armazenamento de um volume persistente, no qual o modo de acesso definido é apenas leitura e escrita
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: livraria_pv
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/livraria"
+    type: DirectoryOrCreate

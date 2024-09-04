@@ -1,0 +1,48 @@
+# Esse arquivo é de deployment referente ao site (backend)
+# Deployments gerenciam pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend_site
+  labels:
+    app: backend_site
+spec:
+  selector:
+    matchLabels:
+      app: backend_site
+  template:
+    metadata:
+      labels:
+        app: backend_site
+    spec:
+      containers:
+        - name: backend_site
+          image: Livraria/docker-img/site:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            # ESSA PARTE PRECISA SER VERIFICADA #
+            - name: MYSQL_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: livraria_configmap
+                  key: database_url
+            ############## ATÉ AQUI ##############
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: livraria_secret
+                  key: username
+            - name: MYSQL_PASSWORD 
+              valueFrom:
+                secretKeyRef:
+                  name: livraria_secret
+                  key: password
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "1"
+            limits:
+              memory: "2Gi"
+              cpu: "2"

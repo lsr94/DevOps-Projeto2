@@ -1,0 +1,15 @@
+# Esse arquivo é de serviço referente ao banco de dados
+# Serviços são utilizados para a garantia do endereço IP de cada pod, isto é, garante que o mesmo endereço permanece mesmo que o pod caia (e depois suba novamente)
+apiVersion: v1
+kind: Service
+metadata:
+  name: livraria_db
+  labels:
+    run: livraria_db
+spec:
+  ports:
+    - port: 3306
+      targetPort: 3306
+      protocol: TCP
+  selector:
+    app: livraria_db

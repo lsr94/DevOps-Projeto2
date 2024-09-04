@@ -1,0 +1,45 @@
+# Esse arquivo é de deployment referente ao banco de dados
+# Deployments gerenciam pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livraria_db
+  labels:
+    app: livraria_db
+spec:
+  selector:
+    matchLabels:
+      app: livraria_db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: livraria_db
+    spec:
+      containers:
+      - name: livraria_db
+        image: mysql:5.6.36
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 3306
+        env:
+          - name: MYSQL_ROOT_PASSWORD 
+            valueFrom:
+              secretKeyRef:
+                name: livraria_secret
+                key: password
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "1"
+          limits:
+            memory: "2Gi"
+            cpu: "2"
+        volumeMounts:
+          - name: livraria_volumes
+            mountPath: /var/lib/mysql
+      volumes:
+        - name: livraria_volumes
+          persistentVolumeClaim:
+            claimName: livraria_pv_claim

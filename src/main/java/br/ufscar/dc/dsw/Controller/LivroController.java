@@ -77,7 +77,6 @@ public class LivroController extends HttpServlet {
         // Verifique se o valor está sendo definido corretamente
         System.out.println("Caminho da Capa: " + capa.getCaminho());
         
-        Long idLivro = capa.getIdLivro(); // testei e nao foi
         request.setAttribute("caminhoCapa", "capa" + id + ".jpg");
         RequestDispatcher dispatcher = request.getRequestDispatcher("/livro/capaLivro.jsp");
         dispatcher.forward(request, response);

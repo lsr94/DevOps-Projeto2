@@ -1,0 +1,15 @@
+# Esse arquivo é de serviço referente as imagens das capas dos livros, que nada mais é do que um backend secundário que será referenciado
+# Serviços são utilizados para a garantia do endereço IP de cada pod, isto é, garante que o mesmo endereço permanece mesmo que o pod caia (e depois suba novamente)
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend_capas_livros
+  labels:
+    run: backend_capas_livros
+spec:
+  ports:
+    - port: 8081
+      targetPort: 8081
+      protocol: TCP
+  selector:
+    app: backend_capas_livros

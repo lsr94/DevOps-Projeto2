@@ -1,0 +1,14 @@
+# Esse arquivo é de volume persistente denotado 'claim' (persistent volume claim - pvc)
+# Define o armazenamento de um volume denominado claim
+# Há menos definições do que o arquivo pv.yaml e há solicitação (request) de armazenamento
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: livraria_pv_claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi

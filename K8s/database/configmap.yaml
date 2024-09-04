@@ -1,0 +1,8 @@
+# Esse arquivo é de mapeamento de configurações (configuration map - configmap)
+# É um objeto da API usado para armazenar dados NÃO-confidenciais em pares chave-valor 
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: livraria_configmap
+data: # PRECISA MODIFICAR A URL ABAIXO
+  database_url: jdbc:mysql://contatos-db:3306/Contatos?createDatabaseIfNotExist=true
