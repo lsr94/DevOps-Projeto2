@@ -6,9 +6,7 @@ services:
     env_file:
       - .env
     volumes:
-      #- './db/MySQL:/tmp/db'
       - ./data:/var/lib/mysql
-    #command: mysqld --init-file="/tmp/db/create.sql" --max-connections=500
   
   tomcat:
     image: web
@@ -23,7 +21,7 @@ services:
       - mysql
   
   images:
-    image: nginx:alpine
+    image: book-covers
     container_name: images_covers
     ports:
       - "8081:80"
