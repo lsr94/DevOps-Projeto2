@@ -3,21 +3,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend_site
+  name: backend-site
   labels:
-    app: backend_site
+    app: backend-site
 spec:
   selector:
     matchLabels:
-      app: backend_site
+      app: backend-site
   template:
     metadata:
       labels:
-        app: backend_site
+        app: backend-site
     spec:
       containers:
-        - name: backend_site
-          image: Livraria/docker-img/site:latest
+        - name: backend-site
+          image: web
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -26,18 +26,23 @@ spec:
             - name: MYSQL_URL
               valueFrom:
                 configMapKeyRef:
-                  name: livraria_configmap
+                  name: livraria-configmap
                   key: database_url
+            - name: MYSQL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: livraria-configmap
+                  key: host
             ############## ATÉ AQUI ##############
             - name: MYSQL_USER
               valueFrom:
                 secretKeyRef:
-                  name: livraria_secret
+                  name: livraria-secret
                   key: username
             - name: MYSQL_PASSWORD 
               valueFrom:
                 secretKeyRef:
-                  name: livraria_secret
+                  name: livraria-secret
                   key: password
           resources:
             requests:

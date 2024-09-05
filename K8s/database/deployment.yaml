@@ -3,23 +3,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: livraria_db
+  name: livraria-db
   labels:
-    app: livraria_db
+    app: livraria-db
 spec:
   selector:
     matchLabels:
-      app: livraria_db
+      app: livraria-db
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: livraria_db
+        app: livraria-db
     spec:
       containers:
-      - name: livraria_db
-        image: mysql:5.6.36
+      - name: livraria-db
+        image: db
         imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 3306
@@ -27,7 +27,7 @@ spec:
           - name: MYSQL_ROOT_PASSWORD 
             valueFrom:
               secretKeyRef:
-                name: livraria_secret
+                name: livraria-secret
                 key: password
         resources:
           requests:
@@ -37,9 +37,9 @@ spec:
             memory: "2Gi"
             cpu: "2"
         volumeMounts:
-          - name: livraria_volumes
+          - name: livraria-volumes
             mountPath: /var/lib/mysql
       volumes:
-        - name: livraria_volumes
+        - name: livraria-volumes
           persistentVolumeClaim:
-            claimName: livraria_pv_claim
+            claimName: livraria-pv-claim

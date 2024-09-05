@@ -3,21 +3,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend_capas_livros
+  name: backend-capas-livros
   labels:
-    app: backend_capas_livros
+    app: backend-capas-livros
 spec:
   selector:
     matchLabels:
-      app: backend_capas_livros
+      app: backend-capas-livros
   template:
     metadata:
       labels:
-        app: backend_capas_livros
+        app: backend-capas-livros
     spec:
       containers:
-        - name: backend_capas_livros
-          image: nginx:alpine
+        - name: backend-capas-livros
+          image: book-covers
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081

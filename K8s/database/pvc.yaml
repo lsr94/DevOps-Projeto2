@@ -4,7 +4,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: livraria_pv_claim
+  name: livraria-pv-claim
 spec:
   storageClassName: manual
   accessModes:

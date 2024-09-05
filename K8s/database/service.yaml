@@ -3,13 +3,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: livraria_db
+  name: livraria-db
   labels:
-    run: livraria_db
+    run: livraria-db
 spec:
   ports:
     - port: 3306
       targetPort: 3306
       protocol: TCP
   selector:
-    app: livraria_db
+    app: livraria-db
