@@ -11,7 +11,6 @@ import java.util.List;
 import br.ufscar.dc.dsw.domain.Capa;
 import br.ufscar.dc.dsw.domain.Editora;
 import br.ufscar.dc.dsw.domain.Livro;
-import br.ufscar.dc.dsw.domain.Capa;
 
 public class LivrosDAO extends genericDAO {
 

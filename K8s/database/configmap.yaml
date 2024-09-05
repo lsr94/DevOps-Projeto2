@@ -4,5 +4,5 @@ kind: ConfigMap
 apiVersion: v1 
 metadata:
   name: livraria_configmap
-data: # PRECISA MODIFICAR A URL ABAIXO
-  database_url: jdbc:mysql://contatos-db:3306/Contatos?createDatabaseIfNotExist=true
+data: 
+  database_url: jdbc:mysql://localhost:3306/Livraria/Livraria?createDatabaseIfNotExist=true

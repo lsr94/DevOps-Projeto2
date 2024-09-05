@@ -1,13 +1,9 @@
 package br.ufscar.dc.dsw.Controller;
 
 import br.ufscar.dc.dsw.DAO.EditoraDAO;
-import br.ufscar.dc.dsw.DAO.LivrosDAO;
 import br.ufscar.dc.dsw.domain.Editora;
-import br.ufscar.dc.dsw.domain.Livro;   
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

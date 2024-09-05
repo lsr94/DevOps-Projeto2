@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.ufscar.dc.dsw.domain.Editora;
-import br.ufscar.dc.dsw.domain.Livro;
 
 public class EditoraDAO extends genericDAO {
 

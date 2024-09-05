@@ -1,0 +1,30 @@
+# Esse arquivo é de deployment referente ao backend que leva as capas dos livros
+# Deployments gerenciam pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend_capas_livros
+  labels:
+    app: backend_capas_livros
+spec:
+  selector:
+    matchLabels:
+      app: backend_capas_livros
+  template:
+    metadata:
+      labels:
+        app: backend_capas_livros
+    spec:
+      containers:
+        - name: backend_capas_livros
+          image: nginx:alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "1"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
