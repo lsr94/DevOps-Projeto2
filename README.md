@@ -1,4 +1,4 @@
-## 1º Trabalho Prático de DevOps - 2024/1 ##
+## 2º Trabalho Prático de DevOps - 2024/1 ##
 
 ## Integrantes ##
 Este trabalho foi desenvolvido pelas alunos:
@@ -6,4 +6,4 @@ Este trabalho foi desenvolvido pelas alunos:
 - Lara Santiago Rodrigues, RA 769701
 
 ### Veja o arquivo abaixo (.pdf) para ver as informações completas sobre o desenvolvimento do projeto e como executá-lo ###
-![Documentação - T1](https://github.com/Maracujacake/Livraria/blob/main/Documenta%C3%A7%C3%A3o%20-%20T1.pdf).
+![Documentação - T2](https://github.com/lsr94/DevOps-Projeto2-Livraria/blob/vaiCorinthians/Documenta%C3%A7%C3%A3o%20-%20T2.pdf).
