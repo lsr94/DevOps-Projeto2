@@ -22,7 +22,6 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            # ESSA PARTE PRECISA SER VERIFICADA #
             - name: MYSQL_URL
               valueFrom:
                 configMapKeyRef:
@@ -33,7 +32,6 @@ spec:
                 configMapKeyRef:
                   name: livraria-configmap
                   key: host
-            ############## ATÉ AQUI ##############
             - name: MYSQL_USER
               valueFrom:
                 secretKeyRef:
