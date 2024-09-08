@@ -30,9 +30,12 @@ cd ..
 # Inicializando o minikube                 
 minikube start
 
-# Inicializando os complementos necessários             
+# Inicializando o ingress
+minikube image load k8s.gcr.io/ingress-nginx/controller:v1.9.4
+
 minikube addons enable ingress
 
+# Inicializando os complementos necessários             
 minikube addons enable dashboard
 
 minikube addons enable metrics-server
