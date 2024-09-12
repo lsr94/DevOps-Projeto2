@@ -11,6 +11,11 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: backend
+            name: backend-site
             port:
               number: 8080
+        capalivro:
+          service:
+            name: backend-capas-livros
+            port:
+              number: 8081

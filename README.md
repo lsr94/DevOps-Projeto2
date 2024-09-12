@@ -1,4 +1,11 @@
-## 2º Trabalho Prático de DevOps - 2024/1 ##
+## 2º Trabalho Prático de DevOps 🛳️ - 2024/1 ##
+
+### Gerenciador de livros virtual
+
+![image](https://github.com/user-attachments/assets/1668084d-2c1d-4fad-9222-a1e03c0fa0f6)
+
+![image](https://github.com/user-attachments/assets/23c5a658-fe3b-47df-9428-0a1d79830728)
+
 
 ## Integrantes ##
 Este trabalho foi desenvolvido pelas alunos:

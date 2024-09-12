@@ -7,9 +7,11 @@ metadata:
   labels:
     run: livraria-db
 spec:
+  type: NodePort
   ports:
     - port: 3306
       targetPort: 3306
       protocol: TCP
+      nodePort: 30006
   selector:
     app: livraria-db
