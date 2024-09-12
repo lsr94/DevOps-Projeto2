@@ -1,9 +1,9 @@
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/domain/Editora.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/domain/Capa.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/Controller/EditoraController.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/DAO/genericDAO.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/AcessaBD.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/DAO/EditoraDAO.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/Controller/LivroController.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/domain/Livro.java
-/home/lara/Documentos/Faculdade/2024-1/DevOps/Projeto2 - Kubernetes/Livraria/src/main/java/br/ufscar/dc/dsw/DAO/LivrosDAO.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/DAO/EditoraDAO.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/DAO/genericDAO.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/domain/Editora.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/Controller/LivroController.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/AcessaBD.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/DAO/LivrosDAO.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/Controller/EditoraController.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/domain/Capa.java
+/workspaces/DevOps-Projeto2-Livraria/src/main/java/br/ufscar/dc/dsw/domain/Livro.java
