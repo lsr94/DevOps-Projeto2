@@ -21,7 +21,7 @@ services:
       - mysql
   
   images:
-    image: book-covers
+    image: capas
     container_name: images_covers
     ports:
       - "8081:80"

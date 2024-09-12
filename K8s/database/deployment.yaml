@@ -31,11 +31,11 @@ spec:
                 key: password
         resources:
           requests:
-            memory: "1Gi"
-            cpu: "1"
+            memory: "512Mi"
+            cpu: "50m"
           limits:
-            memory: "2Gi"
-            cpu: "2"
+            memory: "1Gi"
+            cpu: "200m"
         volumeMounts:
           - name: livraria-volumes
             mountPath: /var/lib/mysql

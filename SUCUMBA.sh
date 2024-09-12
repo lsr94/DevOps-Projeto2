@@ -1,9 +1,9 @@
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-minikube version
+#curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+#sudo install minikube-linux-amd64 /usr/local/bin/minikube
+#minikube version
 minikube stop
 minikube delete
 

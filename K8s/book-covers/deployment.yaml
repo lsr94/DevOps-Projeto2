@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: backend-capas-livros
-          image: book-covers
+          image: capas
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081
           resources:
             requests:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "512Mi"
+              cpu: "50m"
             limits:
-              memory: "2Gi"
-              cpu: "2"
+              memory: "1Gi"
+              cpu: "200m"

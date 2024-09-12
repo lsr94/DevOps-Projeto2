@@ -1,5 +1,5 @@
 # Inicializando o minikube                 
-sudo minikube start --force
+minikube start # --force
 
 # Inicializando o ingress
 minikube image load k8s.gcr.io/ingress-nginx/controller:v1.9.4
@@ -25,9 +25,9 @@ cd ../book-covers
 
 cp -r ../../book-covers .
 
-docker build . -t book-covers
+docker build . -t capas
 
-minikube image load book-covers
+minikube image load capas
 
 # Gerando a imagem do docker do backend 
 cd ../site
@@ -44,7 +44,9 @@ cd ../..
 # 1) Banco de dados (db)
 cd K8s/database
 
+
 kubectl create -f pv.yaml; kubectl create -f pvc.yaml;
+
 
 kubectl apply -f configmap.yaml; kubectl apply -f secret.yaml;
 
@@ -67,3 +69,10 @@ kubectl wait --for=jsonpath='{.status.phase}'=Running $(kubectl get pods -o=name
 kubectl apply -f deployment.yaml; kubectl apply -f service.yaml;
 
 cd ../..
+
+#deus pq vc e assim cmg
+#kubectl delete pv livraria-pv
+#cd K8s/database
+#kubectl apply -f pv.yaml
+#kubectl get pods
+#kubectl delete pod <pod do bd>
