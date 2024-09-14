@@ -70,6 +70,8 @@ kubectl apply -f deployment.yaml; kubectl apply -f service.yaml;
 
 cd ../..
 
+kubectl apply -f K8s/ingress.yaml
+
 #deus pq vc e assim cmg
 #kubectl delete pv livraria-pv
 #cd K8s/database

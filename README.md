@@ -19,6 +19,10 @@ Grande parte do projeto foi desenvolvido no github codespaces, logo, isso **AFET
 kubectl port-forward service/backend-capas-livros 8081:8081
 ```
 
+---
+
+Somente utilizar: ``` kubectl port-forward --address 0.0.0.0 svc/backend-site 8080:8080 ``` também funcionou
+
 Isso permite o acesso à aplicação por meio de uma URL fornecida pelo próprio codespaces, *exemplo no nosso caso:*
 
 ![image](https://github.com/user-attachments/assets/9c8bce5a-1d83-4a93-8a2c-2cc00a618f81)
