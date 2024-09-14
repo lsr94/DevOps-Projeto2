@@ -76,8 +76,8 @@ public class LivroController extends HttpServlet {
         
         // Verifique se o valor está sendo definido corretamente
         System.out.println("Caminho da Capa: " + capa.getCaminho());
-        
-        request.setAttribute("caminhoCapa", "capa" + id + ".jpg");
+        String baseURL = "https://laughing-computing-machine-7x95p9q6g4qhpxx-8081.app.github.dev/";
+        request.setAttribute("caminhoCapa", baseURL + "capa" + id + ".jpg");
         RequestDispatcher dispatcher = request.getRequestDispatcher("/livro/capaLivro.jsp");
         dispatcher.forward(request, response);
     }

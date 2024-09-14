@@ -8,9 +8,9 @@
     <div align="center">
         <h1>Capa do Livro</h1>
         <!-- Supondo que 'caminhoCapa' contenha o nome da imagem, como 'capa1.jpg' -->
-        <img src="http://192.168.49.2:30081/${caminhoCapa}" alt="Capa do Livro" />
+        <img src="${caminhoCapa}" alt="Capa do Livro" />
         <br><br>
-        <a href="http://192.168.49.2:30081/${caminhoCapa}">Ver Imagem</a>
+        <a href="${caminhoCapa}">Ver Imagem</a>
         <br><br>
         <a href="javascript:history.back()">Voltar</a>
     </div>

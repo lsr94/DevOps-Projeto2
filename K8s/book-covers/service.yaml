@@ -7,11 +7,9 @@ metadata:
   labels:
     run: backend-capas-livros
 spec:
-  type: NodePort
   ports:
     - port: 8081
       targetPort: 80
       protocol: TCP
-      nodePort: 30081
   selector:
     app: backend-capas-livros

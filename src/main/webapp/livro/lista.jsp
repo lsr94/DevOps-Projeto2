@@ -15,9 +15,9 @@
         <div class="text-center mb-8">
             <h1 class="text-4xl font-bold mb-4">Gerenciamento de Livros</h1>
             <h2 class="text-xl">
-                <a href="/${requestScope.contextPath}" class="text-blue-500 hover:text-blue-700 transition-colors">Menu Principal</a>
+                <a href="/" class="text-blue-500 hover:text-blue-700 transition-colors">Menu Principal</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/${requestScope.contextPath}/livros/cadastro" class="text-blue-500 hover:text-blue-700 transition-colors">Adicione Novo Livro</a>
+                <a href="/livros/cadastro" class="text-blue-500 hover:text-blue-700 transition-colors">Adicione Novo Livro</a>
             </h2>
         </div>
 
@@ -46,12 +46,12 @@
                             <td class="py-3 px-6 text-left">${livro.ano}</td>
                             <td class="py-3 px-6 text-left">${livro.preco}</td>
                             <td class="py-3 px-6 text-left">
-                                <a href="/${requestScope.contextPath}/livros/pegarCapa?id=${livro.id}" class="text-blue-500 hover:text-blue-700 transition-colors">Capa do livro</a>
+                                <a href="/livros/pegarCapa?id=${livro.id}" class="text-blue-500 hover:text-blue-700 transition-colors">Capa do livro</a>
                             </td>
                             <td class="py-3 px-6 text-left">
-                                <a href="/${requestScope.contextPath}/livros/edicao?id=${livro.id}" class="text-yellow-500 hover:text-yellow-700 transition-colors">Edição</a>
+                                <a href="/livros/edicao?id=${livro.id}" class="text-yellow-500 hover:text-yellow-700 transition-colors">Edição</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/${requestScope.contextPath}/livros/remocao?id=${livro.id}"
+                                <a href="/livros/remocao?id=${livro.id}"
                                     onclick="return confirm('Tem certeza de que deseja excluir este item?');"
                                     class="text-red-500 hover:text-red-700 transition-colors">
                                     Remoção
