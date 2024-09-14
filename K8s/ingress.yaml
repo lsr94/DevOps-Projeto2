@@ -4,7 +4,7 @@ metadata:
   name: gateway-ingress
 spec:
   rules:
-  - host: Livraria.k8s.local
+  - host: livraria.k8s.local
     http:
       paths:
       - path: /
